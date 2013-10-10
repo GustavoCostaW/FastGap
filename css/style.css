@@ -1,0 +1,109 @@
+/* CREATED BY @GUSTAVOCOSTAW */
+
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+
+  	-webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  	-webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  	-webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+ 	-webkit-tap-highlight-color: transparent; /* For some Androids */ 	
+  	-webkit-user-select: none;   
+}
+body {
+	width:100%;
+	background: #cddee8;
+	font:20px 'Trebuchet MS';
+}
+header {
+	width:100%;
+	height:90px;
+	text-align: center;
+	background: #FFF url('../img/img-logo-fastergap.png') no-repeat center;
+	position: absolute;
+	top:0;
+}
+#page {
+	position:absolute;
+	top:100px;
+	left:0;
+	width:100%;
+	height:100%;
+
+	-webkit-transition: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+}
+.title-page {
+	font-size: 40px;
+	color:black;
+	padding-bottom: 20px;
+	border-bottom:1px solid #ccc;
+	padding-left:20px;
+}
+nav ul li {
+	margin-top:10px;
+	width:100%;
+	height:40px;
+}
+.botoes-app {
+	display: block;
+	width:80%;
+	background: #345365;
+	text-decoration: none;
+	height:40px;
+	border:1px solid #fff;
+	margin:0 auto;
+	text-align: center;
+	color:white;
+	line-height: 40px;
+	border-radius: 10px;
+}
+#voltar {
+	top:5px;
+	left:3px;
+	position: absolute;
+	z-index: 999;
+	display: block;
+	width:50px;
+	color:white;
+	height:90px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 37px;
+	background: #345365;
+	font-family: Comic;
+	background: url('../img/back.png') no-repeat center;
+}
+.page {
+	-webkit-overflow-scrolling:touch;
+	overflow: hidden;
+	padding:0px 10px 150px 10px;
+}
+
+/* PAGINAS INTERNAS */
+
+.page-item {
+	overflow: hidden;
+	margin-top:20px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+}
+.page-item img{
+	float:right;
+	width:80px;
+	height:80px;
+	border-radius: 60px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.page-item h1 {
+	width:100%;
+	font-size: 25px;
+	text-align: center;
+}
+.page-item p {
+	margin-top:10px;
+	text-align: right;
+	font-size: 16px;
+}
