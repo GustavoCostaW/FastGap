@@ -1,11 +1,12 @@
 // CODIGO CRIADO POR GUSTAVO COSTA - @GustavoCostaW
 
 //ms
-var transitionSpeed = 150;
+var transitionSpeed = 160;
+
 //effects array
 var effects = new Array();
 
-//função que carrega app
+//starts app
 $(document).ready(function(){
 
 	var myApp = function(){
@@ -20,29 +21,29 @@ $(document).ready(function(){
 		}
 
 		function definitions(){
-			//esconde o botão voltar.
+			//hide back button
 			$("#voltar").hide();
-			//fastclick, biblioteca pra performance de touch e click
+			//fastclick, performance library of mouse events to touch events
 			FastClick.attach(document.body);
-			//bloqueia arrastamento de box
+			//block drag "navegator box"
 			$(document).on('touchmove', function(event) {
 			    event.preventDefault();
 			});
 		}
 
 		function startApp(){
-			//ajax que carrega o menu assim que o app anre
+			//ajax load home open first time
 			$.get("pages/home.html",function(data){
-				//pega o conteudo da página menu e coloca na div page
+				//add content in #page
 				$("#page").html(data);
-				//chama a função events que está logo abaixo
+				//call events
 				events();
 			});
 		}
 
-		// função que é chamada acima quando o ajax do menu é carregado
+		//events
 		function events(){
-		    //evento que chama click dos botoes, no caso a classe botoes-app
+		    //listener buttons menu .botoes-app class
 			$("#page").on('click','.botoes-app',function(){
 
 				/* effects, for select one effect, define one effect[0] and effect[1] 
@@ -61,44 +62,43 @@ $(document).ready(function(){
 					//pg3
 					case "page3.html" :
 					effects[0] = { rotateY: '180deg'};
-					effects[1] = { rotateY: '1deg'};
+					effects[1] = { rotateY: '0deg'};
 					break;
 
 				}
 
-				//variavel que guarda botao clicado
-				var btn = $(this);
-				// guardo a pagina html do elemento.
-				page = btn.data("url");
-				//evento de transicao da pagina para tirar da tela
+				// save var in clicked button
+				page = $(this).data("url");
+				//transition effect one 
 				$('#page').transition(effects[0],transitionSpeed,function(){
-					//ajax da pagina
+					//ajax load new page
 					$.get("pages/"+page,function(data){
-						// coloca conteudo carregado via ajax no elemento
+						// add content in #page
 						$("#page").html(data);
 
-						//mostra botão voltar
+						//how back button
 						$("#voltar").show();
-						// volta a div ao centro
+						// transition effect two
 						$('#page').transition(effects[1],transitionSpeed,function(){
+							//callback event 
 						});
 					})
 				});
 			});
 
-			// quando botão voltar for clicado
+			// back button clicked
 			$("#voltar").click(function(){
-				//esconde botão voltar
+				//back button hide
 				$("#voltar").hide();
-				//tira página da tela
+				//effect one
 				$('#page').transition( effects[0] ,transitionSpeed,function(){
-					//ajax da pagina
+					//load home page
 					$.get("pages/home.html",function(data){
-						// coloca conteudo carregado via ajax no elemento
+						// add content in #page
 						$("#page").html(data);
-						// volta a div ao centro
+						// effect two
 						$('#page').transition(effects[1],transitionSpeed,function(){
-							
+							//callback event
 						});
 					})
 				});			
