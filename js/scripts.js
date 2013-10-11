@@ -3,6 +3,9 @@
 //ms
 var transitionSpeed = 160;
 
+//easing default
+var easing = "snap";
+
 //effects array
 var effects = new Array();
 
@@ -64,13 +67,27 @@ $(document).ready(function(){
 					effects[0] = { rotateY: '180deg'};
 					effects[1] = { rotateY: '0deg'};
 					break;
-
+					//pg4
+					case "page4.html" :
+					effects[0] = { scale:0};
+					effects[1] = { scale:1};
+					break;
+					//pg5
+					case "page5.html" :
+					effects[0] = { rotate:'+=20deg',x:window.innerWidth};
+					effects[1] = { rotate:'0deg',x:0};
+					break;
+					//default
+					default:
+					effects[0] = {opacity:0};
+					effects[1] = {opacity:1};
+					easing = "snap";
 				}
 
 				// save var in clicked button
 				page = $(this).data("url");
 				//transition effect one 
-				$('#page').transition(effects[0],transitionSpeed,function(){
+				$('#page').transition(effects[0],transitionSpeed,easing,function(){
 					//ajax load new page
 					$.get("pages/"+page,function(data){
 						// add content in #page
@@ -79,7 +96,7 @@ $(document).ready(function(){
 						//how back button
 						$("#voltar").show();
 						// transition effect two
-						$('#page').transition(effects[1],transitionSpeed,function(){
+						$('#page').transition(effects[1],transitionSpeed,easing,function(){
 							//callback event 
 						});
 					})
@@ -91,13 +108,13 @@ $(document).ready(function(){
 				//back button hide
 				$("#voltar").hide();
 				//effect one
-				$('#page').transition( effects[0] ,transitionSpeed,function(){
+				$('#page').transition( effects[0] ,transitionSpeed,easing,function(){
 					//load home page
 					$.get("pages/home.html",function(data){
 						// add content in #page
 						$("#page").html(data);
 						// effect two
-						$('#page').transition(effects[1],transitionSpeed,function(){
+						$('#page').transition(effects[1],transitionSpeed,easing,function(){
 							//callback event
 						});
 					})
