@@ -9,6 +9,9 @@ var easing = "snap";
 //effects array
 var effects = new Array();
 
+//Scroll
+var myScroll;
+
 //starts app
 $(document).ready(function(){
 
@@ -23,6 +26,18 @@ $(document).ready(function(){
 
 		}
 
+		function scroll() {
+
+			setTimeout(function(){
+
+				myScroll = new iScroll('wrapper');
+			},1000);
+
+
+
+			console.log('ok')
+		}
+
 		function definitions(){
 			//hide back button
 			$("#voltar").hide();
@@ -32,6 +47,11 @@ $(document).ready(function(){
 			$(document).on('touchmove', function(event) {
 			    event.preventDefault();
 			});
+
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			document.addEventListener('DOMContentLoaded', function () { setTimeout(scroll, 200); }, false);
+
+
 		}
 
 		function startApp(){
@@ -112,6 +132,8 @@ $(document).ready(function(){
 						});
 					})
 				});
+
+				scroll();
 			});
 
 			// back button clicked
