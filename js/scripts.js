@@ -93,6 +93,17 @@ $(document).ready(function(){
 						// add content in #page
 						$("#page").html(data);
 
+						if(page == "page1.html"){
+							//carrousel starts in page 1
+							$("#carrousel-app").owlCarousel({
+								  items:1,
+								  autoPlay:true,
+							      slideSpeed : 300,
+							      paginationSpeed : 400,
+							      singleItem: true
+							 });
+						}
+
 						//how back button
 						$("#voltar").show();
 						// transition effect two
