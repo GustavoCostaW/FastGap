@@ -19,6 +19,8 @@ http://ricostacruz.com/jquery.transit/
 Owl Carousel:
 http://owlgraphic.com/owlcarousel/
 
+IScroll
+http://cubiq.org/iscroll
 
 <h2>Requires:</h2>
 
