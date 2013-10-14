@@ -16,6 +16,9 @@ http://jquery.com
 jQuery Transit:
 http://ricostacruz.com/jquery.transit/
 
+Owl Carousel:
+http://owlgraphic.com/owlcarousel/
+
 
 <h2>Requires:</h2>
 
