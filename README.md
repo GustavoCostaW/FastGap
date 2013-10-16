@@ -25,3 +25,10 @@ http://cubiq.org/iscroll
 <h2>Requires:</h2>
 
 Apache server for test on your navegator or run in PhoneGap platform
+
+
+<h2>License</h2>
+
+![GPLv3](http://www.gnu.org/graphics/agplv3-88x31.png)
+[http://www.gnu.org/licenses/gpl.html]
+
