@@ -35,13 +35,17 @@ $(document).ready(function(){
 			$(document).on('touchmove', function(event) {
 			    event.preventDefault();
 			});
+			//fix bug scroll
+			$("#iscroll").css("bottom",$("#page").css("top"));
 		}
 
 		function startApp(){
 			//ajax load home open first time
 			$.get("pages/home.html",function(data){
 				//add content in #page
-				$("#page").html(data);
+				$("#iscroll").html(data);
+				//scroll
+				myScroll = new IScroll('#iscroll',{ scrollbars: true, mouseWheel: true, interactiveScrollbars: true });
 				//call events
 				events();
 			});
@@ -67,8 +71,8 @@ $(document).ready(function(){
 					break;
 					//pg3
 					case "page3.html" :
-					effects[0] = { rotateY: '180deg'};
-					effects[1] = { rotateY: '0deg'};
+					effects[0] = { rotateY: '180deg',opacity:0};
+					effects[1] = { rotateY: '0deg',opacity:1};
 					break;
 					//pg4
 					case "page4.html" :
@@ -94,7 +98,9 @@ $(document).ready(function(){
 					//ajax load new page
 					$.get("pages/"+page,function(data){
 						// add content in #page
-						$("#page").html(data);
+						$("#iscroll").html(data);
+						//scroll
+						myScroll = new IScroll('#iscroll',{ scrollbars: true, mouseWheel: true, interactiveScrollbars: true });
 
 						if(page == "page1.html"){
 							//carrousel starts in page 1
@@ -105,10 +111,6 @@ $(document).ready(function(){
 							      paginationSpeed : 400,
 							      singleItem: true
 							 });
-						}
-						else if(page == "page6.html") {
-							//scrollpage
-							myScroll = new iScroll('wrapper');
 						}
 
 						//how back button
@@ -130,7 +132,10 @@ $(document).ready(function(){
 					//load home page
 					$.get("pages/home.html",function(data){
 						// add content in #page
-						$("#page").html(data);
+						$("#iscroll").html(data);
+						//scroll
+						myScroll = new IScroll('#iscroll',{ scrollbars: true, mouseWheel: true, interactiveScrollbars: true });
+
 						// effect two
 						$('#page').transition(effects[1],transitionSpeed,easing,function(){
 							//callback event
