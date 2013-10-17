@@ -32,3 +32,29 @@ Apache server for test on your navegator or run in PhoneGap platform
 ![GPLv3](http://www.gnu.org/graphics/agplv3-88x31.png)
 [http://www.gnu.org/licenses/gpl.html]
 
+<h2>Demos</h2>
+
+
+BLACKBERRY:
+
+Z10:
+https://www.dropbox.com/s/l0meh8qevre83oj/VID-20131015-00000.3GP
+
+
+
+ANDROID:
+
+GALAXY Y:
+https://www.dropbox.com/s/r0w304ehfh4735h/VID-20131016-00004.3GP
+
+
+
+APPLE:
+
+IPHONE 3GS:
+http://www.youtube.com/watch?v=DBFbKnA5Qw4&feature=youtu.be
+
+IPAD 2:
+https://www.dropbox.com/s/aj5yxbgl2q01qz5/VID_20131016_203233.mp4
+
+
