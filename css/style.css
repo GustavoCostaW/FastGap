@@ -29,7 +29,7 @@ header {
 }
 /* BOX LOAD PAGES */
 #page {
-	position:fixed;
+	position:absolute;
 	top:100px;
 	left:0;
 	width:100%;
