@@ -24,12 +24,12 @@ header {
 	height:90px;
 	text-align: center;
 	background: #FFF url('../img/img-logo-fastergap.png') no-repeat center;
-	position: absolute;
+	position: fixed;
 	top:0;
 }
 /* BOX LOAD PAGES */
 #page {
-	position:absolute;
+	position:fixed;
 	top:100px;
 	left:0;
 	width:100%;
@@ -109,7 +109,7 @@ nav ul li {
 
 /* SCROLL */
 .space {
-	padding:0 10px;
+	padding:0 20px;
 }
 #iscroll {
 	position:absolute; 
