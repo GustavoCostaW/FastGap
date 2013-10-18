@@ -28,15 +28,20 @@ header {
 	top:0;
 }
 /* BOX LOAD PAGES */
-#page {
+#page, .app2 {
 	position:absolute;
 	top:100px;
-	left:0;
 	width:100%;
 	height:100%;
 
 	-webkit-transition: translate3d(0,0,0);
-	-webkit-backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+}
+#page1 {
+	left:0;
+}
+#page2 {
+	left:100%;
 }
 .title-page {
 	font-size: 30px;
@@ -51,17 +56,18 @@ nav ul li {
 	width:100%;
 }
 .botoes-app {
-	display: block;
+	background-color:#111;
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	color:#fff;
+	padding:15px 20px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	width:80%;
-	background: black;
-	text-decoration: none;
-	height:50px;
-	border:1px solid #fff;
-	margin:0 auto;
 	text-align: center;
-	color:white;
-	line-height: 50px;
-	border-radius: 10px;
+	display: block;
+	margin:0 auto;
 }
 /* BACK BUTTON */
 #voltar {

@@ -1,0 +1,38 @@
+<!-- GOOGLE MAPS FASTGAP BETA - 
+
+	TO USE GOOGLE MAPS JAVASCRIPT V3, ADD 
+
+	 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+	 IN INDEX.HTML
+
+   	 AND THE CSS:
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+	
+	JAVASCRIPT:
+
+
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(-34.397, 150.644),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
+
+    </script>
+
+    AND THE HTML:
+
+    <div id="map-canvas"></div>
+
+-->
+ <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Macei%C3%B3+-+Alagoas,+Brazil&amp;aq=0&amp;oq=maceio&amp;sll=37.0625,-95.677068&amp;sspn=37.410045,41.660156&amp;ie=UTF8&amp;hq=&amp;hnear=Macei%C3%B3+-+Alagoas,+Brazil&amp;ll=-9.666252,-35.735098&amp;spn=0.728337,1.109619&amp;t=m&amp;z=10&amp;output=embed"></iframe>
+
