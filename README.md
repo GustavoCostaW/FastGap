@@ -37,26 +37,26 @@ Apache server for test on your navegator or run in PhoneGap platform
 
 BLACKBERRY:
 
-Z10:
+ * Z10:
 https://www.dropbox.com/s/l0meh8qevre83oj/VID-20131015-00000.3GP
 
 
 
 ANDROID:
 
-GALAXY Y:
+ * GALAXY Y:
 https://www.dropbox.com/s/r0w304ehfh4735h/VID-20131016-00004.3GP
 
-GALAXY FAME:
+ * GALAXY FAME:
 https://dl.dropboxusercontent.com/u/971056/FastGap/Galaxy_Fame.mp4
 
 
 APPLE:
 
-IPHONE 3GS:
+ * IPHONE 3GS:
 http://www.youtube.com/watch?v=DBFbKnA5Qw4&feature=youtu.be
 
-IPAD 2:
+ * IPAD 2:
 https://dl.dropboxusercontent.com/u/971056/FastGap/IPad2.mp4
 
 
