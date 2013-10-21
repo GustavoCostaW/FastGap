@@ -48,7 +48,7 @@ GALAXY Y:
 https://www.dropbox.com/s/r0w304ehfh4735h/VID-20131016-00004.3GP
 
 GALAXY FAME:
-http://www.gnu.org/licenses/gpl.html
+https://dl.dropboxusercontent.com/u/971056/FastGap/Galaxy_Fame.mp4
 
 
 APPLE:
