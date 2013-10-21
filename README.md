@@ -30,7 +30,7 @@ Apache server for test on your navegator or run in PhoneGap platform
 <h2>License</h2>
 
 ![GPLv3](http://www.gnu.org/graphics/agplv3-88x31.png)
-[http://www.gnu.org/licenses/gpl.html]
+
 
 <h2>Demos</h2>
 
@@ -47,6 +47,8 @@ ANDROID:
 GALAXY Y:
 https://www.dropbox.com/s/r0w304ehfh4735h/VID-20131016-00004.3GP
 
+GALAXY FAME:
+http://www.gnu.org/licenses/gpl.html
 
 
 APPLE:
