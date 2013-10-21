@@ -3,6 +3,8 @@ FastGap
 
 Faster PhoneGap Template.
 
+FastGap é um template feito por brasileiros para iniciar o desenvolvimento de apps nativos para smartphones utilizando o PhoneGap.
+
 <h2>Dependencies:</h2>
 
 
