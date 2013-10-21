@@ -57,6 +57,6 @@ IPHONE 3GS:
 http://www.youtube.com/watch?v=DBFbKnA5Qw4&feature=youtu.be
 
 IPAD 2:
-https://www.dropbox.com/s/aj5yxbgl2q01qz5/VID_20131016_203233.mp4
+https://dl.dropboxusercontent.com/u/971056/FastGap/IPad2.mp4
 
 
