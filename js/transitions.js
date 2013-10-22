@@ -103,4 +103,19 @@ function events(){
 		}		
 	});
 
+	//PANE MENU
+    $("#page").on('click','#menu-select',function(){
+            if(!$("menu").hasClass("actived-menu")){
+                    $('menu').transition({x:0},transitionSpeed,easing);
+                    $('#voltar,#header-index').transition({x:$("menu").width()},transitionSpeed,easing);
+                    $("menu").addClass("actived-menu");
+            }
+            else{
+                    $('menu').transition({x:-$("menu").width()},transitionSpeed,easing);
+                    $('#voltar,#header-index').transition({x:0},transitionSpeed,easing);
+                    $("menu").removeClass("actived-menu");
+            }
+
+    })
+
 }

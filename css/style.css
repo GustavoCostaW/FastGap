@@ -153,3 +153,44 @@ nav ul li {
     background-color:#fafafa;
     font-size:14px;
 }
+
+/* PANE MENU */
+
+
+#menu-select {
+        width: 40px;
+        height:20px;
+        position: relative;
+        text-indent: -9999px;
+        overflow: hidden;
+        padding:0 4px;
+        padding-top: 8px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        background: black;
+}
+#menu-select hr {
+        margin:2px auto;
+        width:50%;
+        border-color:white;
+}
+menu {
+	-webkit-transform: translateX(-270px);
+    -webkit-transition: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 220px;
+	background: #d55401;
+}
+
+menu li a {
+	display: block;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	margin: 10px 20px;
+	padding: 15px;
+	color: #FFF;
+	text-decoration: none;
+}
