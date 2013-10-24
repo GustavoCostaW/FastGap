@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>teste</title>
+	<script src="zepto.min.js"></script>
+	<script src="fastclick.js"></script>
+	<script>
+		$(document).ready(function(){
+			FastClick.attach(document.body);
+			$("#box").on("touchstart",function(){
+				if($(this).hasClass("transitionMenu")){
+					$(this).removeClass("transitionMenu");
+				}
+				else {
+					$(this).addClass("transitionMenu");
+				}
+			})
+		})
+
+			
+		
+	</script>
+	<style>
+#box {
+	 -webkit-backface-visibility: hidden;
+	-webkit-transition: translate3d(0,0,0);
+    display: block;
+    width:500px;
+    height: 500px;
+    background: #ccc;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:0.1s;
+    -webkit-transition-timing-function: ease;
+}
+.transitionMenu {
+    -webkit-transform:translateX(350px);
+}
+	</style>
+</head>
+<body>
+	<div id="box">
+		Hey
+	</div>
+</body>
+</html>
