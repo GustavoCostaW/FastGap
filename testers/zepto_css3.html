@@ -8,7 +8,7 @@
 	<script>
 		$(document).ready(function(){
 			FastClick.attach(document.body);
-			$("#box").on("touchstart",function(){
+			$("#box").on("click",function(){
 				if($(this).hasClass("transitionMenu")){
 					$(this).removeClass("transitionMenu");
 				}
