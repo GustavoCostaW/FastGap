@@ -15,62 +15,49 @@
 }
 body {
 	width:100%;
-	background: #ccc;
+	background: #4a4d4e;
 	font:20px 'Trebuchet MS';
+	overflow: hidden;
 }
 /* APP LOGO IMG */
-header {
+header#header-app {
 	width:100%;
-	height:90px;
+	height:85px;
 	text-align: center;
 	background: #FFF url('../img/img-logo-fastergap.png') no-repeat center;
-	position: fixed;
+	position: absolute;
 	top:0;
 }
 /* BOX LOAD PAGES */
-#page, .app2 {
+#page {
 	position:absolute;
-	top:100px;
 	width:100%;
 	height:100%;
 
 	-webkit-transition: translate3d(0,0,0);
 	transform: translate3d(0, 0, 0);
 }
-#page1 {
-	left:0;
-}
-#page2 {
-	left:100%;
-}
 .title-page {
 	font-size: 30px;
-	color:black;
+	color:#b8b9b9;
 	padding-bottom: 20px;
 	border-bottom:1px solid #ccc;
 	padding-left:20px;
 }
-/* MENU BUTTONS */
-nav ul li {
-	margin-bottom:10px;
+#content {
 	width:100%;
+	position: absolute;
+	top:85px;
+	left:0px;
+	height:100%;
+	color:#b8b9b9;
+	overflow: hidden;
 }
-.botoes-app {
-	background-color:#111;
-	font-family: 'Open Sans', sans-serif;
-	font-size:14px;
-	text-decoration:none;
-	color:#fff;
-	padding:15px 20px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	width:80%;
-	text-align: center;
-	display: block;
-	margin:0 auto;
+#content a {
+	color:#b8b9b9;
 }
-/* BACK BUTTON */
-#voltar {
+/* MENU BUTTON */
+#menu-button {
 	top:5px;
 	left:3px;
 	position: absolute;
@@ -78,7 +65,7 @@ nav ul li {
 	display: block;
 	width:80px;
 	color:white;
-	height:90px;
+	height:70px;
 	text-decoration: none;
 	text-align: center;
 	line-height: 37px;
@@ -86,8 +73,21 @@ nav ul li {
 	font-family: Comic;
 	background: url('../img/back.png') no-repeat center;
 }
-/* INTERNAL PAGES */
 
+/* MENU APP */
+menu {
+	position: absolute;
+	top:0;
+	left:0;
+	width:180px;
+}
+/* INTERNAL PAGES */
+.page {
+	padding-bottom: 20px;
+}
+.space {
+	padding:10px;
+}
 .page-item {
 	overflow: hidden;
 	margin-top:20px;
@@ -111,86 +111,4 @@ nav ul li {
 	margin-top:10px;
 	text-align: right;
 	font-size: 16px;
-}
-
-/* SCROLL */
-.space {
-	padding:0 20px;
-}
-#iscroll {
-	position:absolute; 
-	z-index:1;
-	top:0px; 
-	left:0;
-	width:100%;
-	overflow:auto;
-	-webkit-overflow-scrolling:touch;
-}
-
-#iscroll .page {
-	position:absolute;
-	z-index:1;
-	width:100%;
-}
-
-/* LIST */
-
-#thelist{
-    list-style:none;
-    padding:0;
-    margin:0;
-    width:100%;
-    text-align:left;
-}
-
-#thelist li {
-    padding:0 10px;
-    height:40px;
-    margin-bottom: 2px;
-    line-height:40px;
-    border-bottom:1px solid #ccc;
-    border-top:1px solid #fff;
-    background-color:#fafafa;
-    font-size:14px;
-}
-
-/* PANE MENU */
-
-
-#menu-select {
-        width: 40px;
-        height:20px;
-        position: relative;
-        text-indent: -9999px;
-        overflow: hidden;
-        padding:0 4px;
-        padding-top: 8px;
-        padding-bottom: 5px;
-        cursor: pointer;
-        background: black;
-}
-#menu-select hr {
-        margin:2px auto;
-        width:50%;
-        border-color:white;
-}
-menu {
-	-webkit-transform: translateX(-270px);
-    -webkit-transition: translate3d(0,0,0);
-    transform: translate3d(0, 0, 0);
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	width: 220px;
-	background: #d55401;
-}
-
-menu li a {
-	display: block;
-	border-bottom: 1px solid rgba(255,255,255,.3);
-	margin: 10px 20px;
-	padding: 15px;
-	color: #FFF;
-	text-decoration: none;
 }

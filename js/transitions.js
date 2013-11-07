@@ -1,121 +1,102 @@
 // FASTGAP - GUSTAVO COSTA - @GustavoCostaW
 
-//ms
-var transitionSpeed = 160;
-
-//easing default
-var easing = "snap";
-
-//effects array
-var effects = new Array();
+//effects class
+var transitionClass;
+//controll transitions
+var transitionControl = true;
 
 //events
-function events(){
+function transitions(){
     //listener buttons menu .botoes-app class
 	$("#page").on('click','.botoes-app',function(){
 
-		/* effects, for select one effect, define one effect[0] and effect[1] 
-		view more on http://ricostacruz.com/jquery.transit/ */ 
+		transitionControl = true;
+		/* effects, for select one effect, create or view effects in transitions.css */
 		switch($(this).data("url")) {
 			//pg1
 			case "page1.html" :
-			effects[0] = {opacity:0};
-			effects[1] = {opacity:1};
+				transitionClass = "transitionApp1";
 			break;
 			//pg2
 			case "page2.html" :
-			effects[0] = {x:window.innerWidth,opacity:0};
-			effects[1] = {x:0,opacity:1};
+				transitionClass = "transitionApp2";
 			break;
 			//pg3
 			case "page3.html" :
-			effects[0] = { rotateY: '180deg',opacity:0};
-			effects[1] = { rotateY: '0deg',opacity:1};
+				transitionClass = "transitionApp3";
 			break;
 			//pg4
 			case "page4.html" :
-			effects[0] = { scale:0};
-			effects[1] = { scale:1};
+				transitionClass = "transitionApp4";
 			break;
 			//pg5
 			case "page5.html" :
-			effects[0] = { rotate:'+=20deg',x:window.innerWidth};
-			effects[1] = { rotate:'0deg',x:0};
+				transitionClass = "transitionApp5";
 			break;
-			//default
+			transitionClass = "transitionApp1";
 			default:
-			effects[0] = {opacity:0};
-			effects[1] = {opacity:1};
-			easing = "snap";
+				
 		}
+		//start event
+		$("#content").addClass(transitionClass);
 
 		// save var in clicked button
 		page = $(this).data("url");
-		//transition effect one 
-		$('#page').transition(effects[0],transitionSpeed,easing,startTransition);
-			
-		function startTransition(){
-			//ajax load new page
-			$.get("pages/"+page,function(data){
-				// add content in #page
-				$("#iscroll").html(data);
-				//scroll
-				myScroll = new IScroll('#iscroll',{ scrollbars: true, mouseWheel: true, interactiveScrollbars: true });
-
-				if(page == "page1.html"){
-					//carrousel starts in page 1
-					$("#carrousel-app").owlCarousel({
-						  items:1,
-						  autoPlay:true,
-					      slideSpeed : 300,
-					      paginationSpeed : 400,
-					      singleItem: true
-					 });
-				}
-
-				//show back button
-				$("#voltar").show();
-
-				//back transition effect  two
-				$('#page').transition(effects[1],transitionSpeed,easing);
-			})
+		//transition effect for webkit and ms
+		$("#content").on("webkitTransitionEnd transitionend MSTransitionEnd",transitionApp)
+		function transitionApp(){
+			if(transitionControl){
+				//null scroll
+				myScroll = null;
+				ajxPages = null;
+				$("#content").html("");
+				//ajax load new page
+				ajxPages = $.get("pages/"+page,function(data){
+					// add content in #page
+					$("#content").html(data);
+					//scroll
+            		$("#content").height(window.innerHeight-$("header#header-app").height());
+            		myScroll = new IScroll('#content',{ scrollbars: true, mouseWheel: true, interactiveScrollbars: true });
+				    
+				    //back menu
+            		$("#menu").removeClass("transitionMenuAppStart");
+            		$('#content,#header-app').removeClass("transitionContentAppStart");
+					//back transition effect  two
+            		$('#content').removeClass(transitionClass);
+				});
+			transitionControl = false;
+			}
 		}
 	});
+	// menu btn click
+    $("#page").on('click',"#menu-button",function(){
+    	transitionControl = false;
+        showMenu();
+    });
 
-	// back button clicked
-	$("#voltar").click(function(){
-		//back button hide
-		$("#voltar").hide();
-		//effect one
-		$('#page').transition( effects[0] ,transitionSpeed,easing,endTransition);
+    // swipe
+    Hammer(document).on("swipeleft",function(){
+        if($("#menu").hasClass("transitionMenuAppStart")){
+        	transitionControl = false;
+            showMenu();
+        }
+    });
+    Hammer(document).on("swiperight",function(){
+        if(!$("#menu").hasClass("transitionMenuAppStart")){
+        	transitionControl = false;
+            showMenu();
+        }
+    });
 
-		function endTransition(){
-			//load home page
-			$.get("pages/home.html",function(data){
-				// add content in #page
-				$("#iscroll").html(data);
-				//scroll
-				myScroll = new IScroll('#iscroll',{ scrollbars: true, mouseWheel: true, interactiveScrollbars: true });
-
-				//back effect two
-				$('#page').transition(effects[1],transitionSpeed,easing);
-			})
-		}		
-	});
-
-	//PANE MENU
-    $("#page").on('click','#menu-select',function(){
-            if(!$("menu").hasClass("actived-menu")){
-                    $('menu').transition({x:0},transitionSpeed,easing);
-                    $('#voltar,#header-index').transition({x:$("menu").width()},transitionSpeed,easing);
-                    $("menu").addClass("actived-menu");
-            }
-            else{
-                    $('menu').transition({x:-$("menu").width()},transitionSpeed,easing);
-                    $('#voltar,#header-index').transition({x:0},transitionSpeed,easing);
-                    $("menu").removeClass("actived-menu");
-            }
-
-    })
-
+    //effects in menu
+    function showMenu(){
+        if(!$("#menu").hasClass("transitionMenuAppStart")){
+            $('#content,#header-app').addClass("transitionContentAppStart"); 
+            $('#menu').addClass("transitionMenuAppStart");               
+        }
+        else{
+            $("#menu").removeClass("transitionMenuAppStart");
+            $('#content,#header-app').removeClass("transitionContentAppStart");
+        }
+    }
 }
