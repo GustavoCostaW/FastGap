@@ -56,6 +56,9 @@ header#header-app {
 #content a {
 	color:#b8b9b9;
 }
+#content, .page {
+    -webkit-overflow-scrolling:touch;
+}
 /* MENU BUTTON */
 #menu-button {
 	top:5px;
