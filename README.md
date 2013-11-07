@@ -29,7 +29,7 @@ Apache server for test on your navegator or run in PhoneGap platform
 
 <h2>Releases</h2>
 
-[New Release 1.0 [BETA]](https://github.com/danielfeelfine/FastGap/releases/tag/1.0.0 "New Release 1.0 [BETA]")
+[New Release 1.0 [BETA]](https://github.com/GustavoCostaW/FastGap/releases/tag/1.0.0 "New Release 1.0 [BETA]")
 
 <h2>Vídeo Demos</h2>
 
