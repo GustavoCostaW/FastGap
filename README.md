@@ -8,11 +8,13 @@ FastGap é um template feito por brasileiros para iniciar o desenvolvimento de a
 FastGap is a template created ​​by Brazilians to start developing native apps for smartphones using PhoneGap.
 
 
-<h2>Aguarde Atualização, SOON UPDATE:</h2>
-<h2>Dependencies:</h2>
+<h2>We use:</h2>
 
 Zepto.js
 http://zeptojs.com
+
+TopCoat
+http://topcoat.io
 
 IScroll:
 http://cubiq.org/iscroll
@@ -27,4 +29,4 @@ Apache server for test on your navegator or run in PhoneGap platform
 
 <h2>Vídeo Demos</h2>
 
-wait update
+soon
