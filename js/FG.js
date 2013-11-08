@@ -43,7 +43,8 @@
 		
 		$("#page").on('click',"#menu-button",Transition.showMenu);
 		
-		
+		Hammer(document).on("swipeleft",Transition.showMenu);
+		Hammer(document).on("swiperight",Transition.showMenu);
 		
 		History.bind('popstate', function() {
 			if (first) {

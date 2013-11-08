@@ -24,7 +24,7 @@
 			PageLoad.load(Navigator.currentPage);
 
 			Transition.control = false;
-//				window.History.pushState(null, null, page);
+			window.History.pushState(null, null, Navigator.currentPage);
 		}
 	};
 
