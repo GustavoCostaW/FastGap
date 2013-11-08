@@ -33,4 +33,14 @@
 		$('#content, #header-app').removeClass("transitionContentAppStart");
 	};
 
+	Transition.showMenu = function() {
+		if (!$("#menu").hasClass("transitionMenuAppStart")) {
+			$('#content,#header-app').addClass("transitionContentAppStart");
+			$('#menu').addClass("transitionMenuAppStart");
+		} else {
+			$("#menu").removeClass("transitionMenuAppStart");
+			$('#content,#header-app').removeClass("transitionContentAppStart");
+		}
+	};
+
 })(window);

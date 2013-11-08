@@ -7,13 +7,8 @@ var transitionControl = true;
 
 //events
 function transitions(){
-	$("#content").on("webkitTransitionEnd transitionend MSTransitionEnd",Transition.End);
+		
 	
-	// menu btn click
-    $("#page").on('click',"#menu-button",function(){
-    	transitionControl = false;
-        showMenu();
-    });
 
     // swipe
     Hammer(document).on("swipeleft",function(){

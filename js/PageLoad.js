@@ -16,7 +16,6 @@
 	
 	
 	PageLoad.load = function(page) {
-		console.log(FG.$content)
 		PageLoad.ajxHandle = $.get("pages/" + page, PageLoad.success);
 	};
 
