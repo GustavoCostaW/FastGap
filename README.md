@@ -27,6 +27,10 @@ Apache server for test on your navegator or run in PhoneGap platform
 
 ![GPLv3](http://www.gnu.org/graphics/agplv3-88x31.png)
 
+<h2>Releases</h2>
+
+[New Release 1.0 [BETA]](https://github.com/GustavoCostaW/FastGap/releases/tag/1.0.0 "New Release 1.0 [BETA]")
+
 <h2>Vídeo Demos</h2>
 
 soon
