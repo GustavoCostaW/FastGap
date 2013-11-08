@@ -50,6 +50,10 @@ function transitions(){
 				myScroll = null;
 				ajxPages = null;
 				$("#content").html("");
+				
+				window.History.pushState(null, null, page);
+				
+				
 				//ajax load new page
 				ajxPages = $.get("pages/"+page,function(data){
 					// add content in #page
