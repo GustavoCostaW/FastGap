@@ -43,32 +43,18 @@ function transitions(){
 		// save var in clicked button
 		page = $(this).data("url");
 		//transition effect for webkit and ms
-		$("#content").on("webkitTransitionEnd transitionend MSTransitionEnd",transitionApp)
+		$("#content").on("webkitTransitionEnd transitionend MSTransitionEnd",transitionApp);
+		
 		function transitionApp(){
 			if(transitionControl){
-				//null scroll
-				myScroll = null;
-				ajxPages = null;
-				$("#content").html("");
-				
-				window.History.pushState(null, null, page);
-				
-				
+								
 				//ajax load new page
-				ajxPages = $.get("pages/"+page,function(data){
-					// add content in #page
-					$("#content").html(data);
-					//scroll
-            		$("#content").height(window.innerHeight-$("header#header-app").height());
-            		myScroll = new IScroll('#content',{ scrollbars: true, mouseWheel: true, interactiveScrollbars: true });
-				    
-				    //back menu
-            		$("#menu").removeClass("transitionMenuAppStart");
-            		$('#content,#header-app').removeClass("transitionContentAppStart");
-					//back transition effect  two
-            		$('#content').removeClass(transitionClass);
-				});
-			transitionControl = false;
+				PageLoad.init();
+				PageLoad.transition = transitionClass;
+				PageLoad.load(page);
+				
+				transitionControl = false;
+				window.History.pushState(null, null, page);
 			}
 		}
 	});

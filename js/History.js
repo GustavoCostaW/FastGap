@@ -4,8 +4,7 @@
  * @license New BSD License <http://creativecommons.org/licenses/BSD/>
  */
 
-// Closure
-(function(window,undefined){
+;(function(window,undefined){
 	"use strict";
 
 	// Localise Globals
