@@ -25,7 +25,7 @@ Apache server for test on your navegator or run in PhoneGap platform
 
 <h2>License</h2>
 
-![GPLv3](http://www.gnu.org/graphics/agplv3-88x31.png)
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.pt_BR"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
 
 <h2>Releases</h2>
 
