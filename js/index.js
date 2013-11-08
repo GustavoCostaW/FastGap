@@ -13,6 +13,8 @@ var ajxPages;
 //starts app
 $(document).ready(function(){
 	var first = true;
+	FG.init();
+	
 	myApp = function(){
 		
 		function init(){
@@ -23,7 +25,6 @@ $(document).ready(function(){
 		function startApp(){
 			// startApp in AppController.js
 			new AppController().initialize();
-			FG.init();
 			History.bind('popstate', historyBack );
 		}
 		

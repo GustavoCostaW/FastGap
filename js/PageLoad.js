@@ -11,38 +11,33 @@
 	// Localise Globals
 	var PageLoad = window.PageLoad = {
 		ajxHandle: null,
-		$content: null,
-		transition : null,
-		elContent : "#content"
+		transition : null
 	};
 	
-	PageLoad.init = function (){
-		PageLoad.$content = $(PageLoad.elContent);
-	};
 	
 	PageLoad.load = function(page) {
-		PageLoad.$content.html('');
+		console.log(FG.$content)
 		PageLoad.ajxHandle = $.get("pages/" + page, PageLoad.success);
 	};
 
 	PageLoad.success = function(content) {
 		// add content in #page
-		PageLoad.$content.html(content);
+		$('#content').html(content);
+		
 		//scroll
-		PageLoad.$content.height(window.innerHeight - $("header#header-app").height());
+		$('#content').height(window.innerHeight - $("header#header-app").height());
 
-		FG.myScroll = new IScroll(PageLoad.elContent, {
+		FG.myScroll = new IScroll(FG.elContent, {
 			scrollbars: true,
 			mouseWheel: true,
 			interactiveScrollbars: true
 		});
-
-		FG.backMenu();
-		PageLoad.animate();
+		
+		Transition.backMenu();
+		
+//		PageLoad.animate();
+		$("#content").removeClass(PageLoad.transition);
 	};
 	
-	PageLoad.animate = function(){
-		PageLoad.$content.removeClass(transitionClass);
-	}
 
 })(window);

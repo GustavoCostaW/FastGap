@@ -11,17 +11,25 @@
 	var FG = window.FG = {
 		myScroll: null,
 		currentThis : null,
-		$menu : null
+		$menu : null,
+		elContent : "#content",
+		$content : null
 	};
 	
 	FG.init = function(){
 		FG.$menu = $("#menu");
+		FG.$content = $(FG.elContent);
+		this.addEventListeners();
 	};
 	
-	FG.backMenu = function(){
-		$("#menu").removeClass("transitionMenuAppStart");
-        $('#content, #header-app').removeClass("transitionContentAppStart");
+	
+	
+	FG.addEventListeners = function(){
+		$("#page").on('click','.botoes-app', Navigator.loadPage);
+		//transition effect for webkit and ms
+		$("#content").on("webkitTransitionEnd transitionend MSTransitionEnd",Transition.End);
 	};
+	
 
 })(window);
 
