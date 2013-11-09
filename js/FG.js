@@ -25,7 +25,6 @@
 		this.addEventListeners();
 		this.definitions();
 		PageLoad.load('home.html');
-		transitions();
 	};
 
 	FG.definitions = function() {
