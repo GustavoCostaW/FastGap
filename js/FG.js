@@ -22,6 +22,7 @@
 	FG.init = function() {
 		FG.$menu = $("#menu");
 		FG.$content = $(FG.elContent);
+                
 		this.addEventListeners();
 		this.definitions();
 		PageLoad.load('home.html');
@@ -50,10 +51,18 @@
 				first = false;
 				return;
 			}
-			var page = location.href
-					.split('/').pop();
-
-			PageLoad.load(page);
+			Navigator.currentPage = location.href
+                                                    .split('/').pop();
+                        
+                        if(Navigator.currentPage.indexOf('.htm') < 0){
+                            return false;
+                        }
+                        
+                        Navigator.isBack = true;
+                        
+			Transition.control = true;
+                        Transition.class = Transition.getClassAnimation(Navigator.currentPage);
+                        Transition.start(); 
 		});
 	};
 

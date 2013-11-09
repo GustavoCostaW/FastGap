@@ -41,7 +41,9 @@
 			PageLoad.load(Navigator.currentPage);
 
 			Transition.control = false;
-			window.History.pushState(null, null, Navigator.currentPage);
+                        if(!Navigator.isBack){
+                            window.History.pushState(null, null, Navigator.currentPage);
+                        }
 		}
 	};
 

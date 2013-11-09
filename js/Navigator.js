@@ -11,7 +11,8 @@
 	// Localise Globals
 	var Navigator = window.Navigator = {
 		control : true,
-		currentPage : ''
+		currentPage : '',
+                isBack : false
 	};
 	
 	Navigator.loadPage = function(){
