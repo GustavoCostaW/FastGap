@@ -10,8 +10,7 @@
 
 	// Localise Globals
 	var PageLoad = window.PageLoad = {
-		ajxHandle: null,
-		transition : null
+		ajxHandle: null
 	};
 	
 	
@@ -21,10 +20,10 @@
 
 	PageLoad.success = function(content) {
 		// add content in #page
-		$('#content').html(content);
+		FG.$content.html(content);
 		
 		//scroll
-		$('#content').height(window.innerHeight - $("header#header-app").height());
+		FG.$content.height(window.innerHeight - FG.$headerApp.height());
 
 		FG.myScroll = new IScroll(FG.elContent, {
 			scrollbars: true,
@@ -32,10 +31,9 @@
 			interactiveScrollbars: true
 		});
 		
-		Transition.backMenu();
+		Transition.hideMenu();
 		
-//		PageLoad.animate();
-		$("#content").removeClass(PageLoad.transition);
+		FG.$content.removeClass(Transition.class);
 	};
 	
 

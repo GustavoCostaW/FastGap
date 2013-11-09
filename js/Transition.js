@@ -32,12 +32,11 @@
         
 
 	Transition.start = function() {
-		$("#content").addClass(Transition.class);
+		FG.$content.addClass(Transition.class);
 	};
 
 	Transition.End = function() {
 		if (Transition.control) {
-			PageLoad.transition = Transition.class;
 			PageLoad.load(Navigator.currentPage);
 
 			Transition.control = false;
@@ -47,18 +46,23 @@
 		}
 	};
 
-	Transition.backMenu = function() {
-		$("#menu").removeClass("transitionMenuAppStart");
-		$('#content, #header-app').removeClass("transitionContentAppStart");
+	Transition.hideMenu = function() {
+		FG.$menu.removeClass("transitionMenuAppStart");
+                FG.$content.removeClass("transitionContentAppStart");
+		FG.$headerApp.removeClass("transitionContentAppStart");
 	};
 
 	Transition.showMenu = function() {
-		if (!$("#menu").hasClass("transitionMenuAppStart")) {
-			$('#content,#header-app').addClass("transitionContentAppStart");
-			$('#menu').addClass("transitionMenuAppStart");
+		FG.$menu.addClass("transitionMenuAppStart");
+                FG.$content.addClass("transitionContentAppStart");
+		FG.$headerApp.addClass("transitionContentAppStart");
+	};
+
+	Transition.toggleMenu = function() {
+		if (!FG.$menu.hasClass("transitionMenuAppStart")) {
+			Transition.showMenu();
 		} else {
-			$("#menu").removeClass("transitionMenuAppStart");
-			$('#content,#header-app').removeClass("transitionContentAppStart");
+			Transition.hideMenu();
 		}
 	};
 
