@@ -13,6 +13,23 @@
 		control: false,
 		class: 'transitionApp1'
 	};
+        
+        /* effects, for select one effect, create or view effects in transitions.css */
+        Transition.animations = {
+            'page1.html' : 'transitionApp1',
+            'page2.html' : 'transitionApp2',
+            'page3.html' : 'transitionApp3',
+            'page4.html' : 'transitionApp4',
+            'page5.html' : 'transitionApp5'
+        }
+        
+        Transition.getClassAnimation = function(page){
+            if(Transition.animations.hasOwnProperty(page)){
+                return Transition.animations[page];
+            }
+            return Transition.class;
+        }
+        
 
 	Transition.start = function() {
 		$("#content").addClass(Transition.class);
