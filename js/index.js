@@ -2,7 +2,6 @@
 
 //starts app
 $(document).ready(function(){
-	var first = true;
 	FG.init();
 });
 
