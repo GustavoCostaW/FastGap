@@ -25,7 +25,6 @@
 		this.addEventListeners();
 		this.definitions();
 		PageLoad.load('home.html');
-		transitions();
 	};
 
 	FG.definitions = function() {
@@ -51,8 +50,7 @@
 				first = false;
 				return;
 			}
-			var page = location.href
-					.split('/').pop();
+			var page = location.href;
 
 			PageLoad.load(page);
 		});
