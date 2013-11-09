@@ -6,21 +6,21 @@
 
 ;
 (function(window, undefined) {
-	"use strict";
+    "use strict";
 
-	// Localise Globals
-	var Navigator = window.Navigator = {
-		control : true,
-		currentPage : '',
-                isBack : false
-	};
-	
-	Navigator.loadPage = function(){
-		Transition.control = true;
-		Navigator.currentPage = $(this).data("url");
-                Transition.class = Transition.getClassAnimation(Navigator.currentPage);
-		Transition.start();		
-	};
-	
+    // Localise Globals
+    var Navigator = window.Navigator = {
+        control: true,
+        currentPage: '',
+        isBack: false
+    };
+
+    Navigator.loadPage = function() {
+        Transition.control = true;
+        Navigator.currentPage = $(this).data("url");
+        Transition.class = Transition.getClassAnimation(Navigator.currentPage);
+        Transition.start();
+    };
+
 
 })(window);
