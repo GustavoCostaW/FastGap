@@ -1,52 +1,50 @@
-/**
- * Navigator
- * @author Alexsandro Souza <apssouza22@gmail.com>
- * @license New BSD License <http://creativecommons.org/licenses/BSD/>
- */
+/* FASTGAP https://github.com/GustavoCostaW/FastGap */
 
-;
-(function(window, undefined) {
-	"use strict";
+(function(window) {
+    //navigator object
+    var Navigator = window.Navigator = {
+        control: true,
+        currentPage: '',
+        isBack: false
+    };
+    //load page
+    Navigator.loadPage = function() {
+        Transition.control = true;
+        Navigator.currentPage = $(this).data("url");
 
-	// Localise Globals
-	var Navigator = window.Navigator = {
-		control : true,
-		currentPage : ''
-	};
-	
-	Navigator.loadPage = function(){
-		Transition.control = true;
-		Navigator.currentPage = $(this).data("url");
-		
-		/* effects, for select one effect, create or view effects in transitions.css */
-		switch(Navigator.currentPage) {
-			//pg1
-			case "page1.html" :
-				Transition.class  = "transitionApp1";
-			break;
-			//pg2
-			case "page2.html" :
-				Transition.class = "transitionApp2";
-			break;
-			//pg3
-			case "page3.html" :
-				Transition.class = "transitionApp3";
-			break;
-			//pg4
-			case "page4.html" :
-				Transition.class = "transitionApp4";
-			break;
-			//pg5
-			case "page5.html" :
-				Transition.class = "transitionApp5";
-			break;
-				Transition.class = "transitionApp1";
-			default:
-				
-		}
+        if (FG.currentController != null){
+            // unset everything in the previous controller
+            // prevent memory leaks
+            FG.currentController.destroy();
+        }
 
-		Transition.start();		
-	};
-	
+        // create new controller
+        switch(Navigator.currentPage){
+            case 'page1.html':
+                FG.currentController = new Page1Controller();
+            break;
+            case 'page2.html':
+                FG.currentController = new Page2Controller();
+            break;
+            case 'page3.html':
+                FG.currentController = new Page3Controller();
+            break;
+            case 'page4.html':
+                FG.currentController = new Page4Controller();
+            break;
+            default:
+                alert('No controller found.');
+            break;
+        }
+
+        // once new controller created, initialize it
+        if (FG.currentController != null){
+            FG.currentController.initialize();
+        }
+
+        Transition.class = Transition.getClassAnimation(Navigator.currentPage);
+        Transition.start();
+    };
+
 
 })(window);
