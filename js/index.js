@@ -1,8 +1,6 @@
-// FASTGAP - GUSTAVO COSTA - @GustavoCostaW
+/* FASTGAP https://github.com/GustavoCostaW/FastGap */
 
 //starts app
 $(document).ready(function(){
-	var first = true;
-	FG.init();
+        FG.init();
 });
-
