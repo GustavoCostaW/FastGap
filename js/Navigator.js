@@ -32,6 +32,9 @@
             case 'page4.html':
                 FG.currentController = new Page4Controller();
             break;
+            case 'page5.html':
+                FG.currentController = new Page5Controller();
+            break;
             default:
                 alert('No controller found.');
             break;
