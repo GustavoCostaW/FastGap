@@ -1,46 +1,63 @@
-/**
- * Transitions
- * @author Alexsandro Souza <apssouza22@gmail.com>
- * @license New BSD License <http://creativecommons.org/licenses/BSD/>
- */
+/* FASTGAP https://github.com/GustavoCostaW/FastGap */
 
-;
-(function(window, undefined) {
-	"use strict";
+(function(window) {
 
-	// Localise Globals
-	var Transition = window.Transition = {
-		control: false,
-		class: 'transitionApp1'
-	};
+    // transition object
+    var Transition = window.Transition = {
+        control: false,
+        class: 'transitionApp1'
+    };
 
-	Transition.start = function() {
-		$("#content").addClass(Transition.class);
-	};
+    /* effects, for select one effect, create or view effects in transitions.css */
+    Transition.animations = {
+        'page1.html': 'transitionApp1',
+        'page2.html': 'transitionApp2',
+        'page3.html': 'transitionApp3',
+        'page4.html': 'transitionApp4',
+        'page5.html': 'transitionApp5'
+    }
+    //get current class for page
+    Transition.getClassAnimation = function(page) {
+        if (Transition.animations.hasOwnProperty(page)) {
+            return Transition.animations[page];
+        }
+        return Transition.class;
+    }
 
-	Transition.End = function() {
-		if (Transition.control) {
-			PageLoad.transition = Transition.class;
-			PageLoad.load(Navigator.currentPage);
+    //start transition
+    Transition.start = function() {
+        FG.$content.addClass(Transition.class);
+    };
+    //end transition with listener
+    Transition.End = function() {
+        if (Transition.control) {
+            PageLoad.load(Navigator.currentPage);
 
-			Transition.control = false;
-			window.History.pushState(null, null, Navigator.currentPage);
-		}
-	};
-
-	Transition.backMenu = function() {
-		$("#menu").removeClass("transitionMenuAppStart");
-		$('#content, #header-app').removeClass("transitionContentAppStart");
-	};
-
-	Transition.showMenu = function() {
-		if (!$("#menu").hasClass("transitionMenuAppStart")) {
-			$('#content,#header-app').addClass("transitionContentAppStart");
-			$('#menu').addClass("transitionMenuAppStart");
-		} else {
-			$("#menu").removeClass("transitionMenuAppStart");
-			$('#content,#header-app').removeClass("transitionContentAppStart");
-		}
-	};
+            Transition.control = false;
+            if (!Navigator.isBack) {
+                window.History.pushState(null, null, Navigator.currentPage);
+            }
+        }
+    };
+    //toggleMenu
+    Transition.toggleMenu = function() {
+        if (!FG.$menu.hasClass("transitionMenuAppStart")) {
+            Transition.showMenu();
+        } else {
+            Transition.hideMenu();
+        }
+    };
+    //hide panel menu
+    Transition.hideMenu = function() {
+        FG.$menu.removeClass("transitionMenuAppStart");
+        FG.$content.removeClass("transitionContentAppStart");
+        FG.$headerApp.removeClass("transitionContentAppStart");
+    };
+    //show panel menu
+    Transition.showMenu = function() {
+        FG.$menu.addClass("transitionMenuAppStart");
+        FG.$content.addClass("transitionContentAppStart");
+        FG.$headerApp.addClass("transitionContentAppStart");
+    };
 
 })(window);
