@@ -1,36 +1,44 @@
-FastGap
-=======
+[![Stories in Ready](https://badge.waffle.io/FastGap/fastgap.png?label=ready)](https://waffle.io/FastGap/fastgap)  
 
-Faster PhoneGap Template.
+#FastGap -- Node.JS Version
 
-FastGap é um template feito por brasileiros para iniciar o desenvolvimento de apps nativos para smartphones utilizando o PhoneGap.
+A jump-start for Fast Phonegap Development.
 
-FastGap is a template created ​​by Brazilians to start developing native apps for smartphones using PhoneGap.
+FastGap is a template created by Brazilians to start developing native apps for smartphones using PhoneGap.
 
+##We use
 
-<h2>We use:</h2>
+* [Zepto.js](href='http://zeptojs.com')
+* [TopCoat](href='http://topcoat.io')
+* [IScroll](href='http://cubiq.org/iscroll')
+* [Hammer](href='http://eightmedia.github.io/hammer.js')
 
-Zepto.js
-http://zeptojs.com
+##Requires
 
-TopCoat
-http://topcoat.io
+* [Node.JS](href='http://nodejs.org/')
 
-IScroll:
-http://cubiq.org/iscroll
+##Usase
 
-<h2>Requires:</h2>
+######If you already have installed
 
-Apache server for test on your navegator or run in PhoneGap platform
+#### Clone
 
-<h2>License</h2>
+    git clone https://github.com/FastGap/fastgap.git
 
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.pt_BR"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+#### Install npm packages
 
-<h2>Releases</h2>
+    [sudo] npm install
 
-[New Release 1.0 [BETA]](https://github.com/GustavoCostaW/FastGap/releases/tag/1.0.0 "New Release 1.0 [BETA]")
+#### Run
 
-<h2>Vídeo Demos</h2>
+    node app.js
+
+######Your project is running on localhost:3000
+
+#### Releases
+
+soon
+
+#### VC-deo Demos</h2>
 
 soon

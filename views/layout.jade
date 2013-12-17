@@ -1,0 +1,30 @@
+doctype 5
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    //-  BOX CONTENT LOAD PAGES WITH AJAX
+    div#page
+      //- MENU 
+      menu#menu
+        .topcoat-list
+          ul.topcoat-list__container
+            li.topcoat-list__item.botoes-app(data-url='page1.html')
+              | Transition 1 + SCROLL TEST
+            li.topcoat-list__item.botoes-app(data-url='page2.html')
+              | Transition 2 + CONTROLLER EVENTS
+            li.topcoat-list__item.botoes-app(data-url='page3.html')
+              | Transition 3
+            li.topcoat-list__item.botoes-app(data-url='page4.html')
+              | Transition 4
+            li.topcoat-list__item.botoes-app(data-url='page5.html')
+              | Transition 5
+      header#header-app
+        //- APP IMG LOAD WITH CSS 
+        #menu-button
+      //- DYNAMIC CONTENT 
+      #content
+
+    block content
