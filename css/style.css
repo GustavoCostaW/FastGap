@@ -87,6 +87,9 @@ menu {
 	left:0;
 	width:180px;
 }
+#menu-content{
+    position:relative;
+}
 /* INTERNAL PAGES */
 .page {
 	padding-bottom: 20px;
