@@ -16,7 +16,6 @@
 body {
 	width:100%;
 	background: #4a4d4e;
-	font:20px 'Trebuchet MS';
 	overflow: hidden;
 }
 /* APP LOGO IMG */
@@ -76,7 +75,6 @@ header#header-app {
 	text-align: center;
 	line-height: 37px;
 	background: #345365;
-	font-family: Comic;
 	background: url('../img/back.png') no-repeat center;
 }
 
@@ -109,10 +107,12 @@ menu {
 	margin-left: 10px;
 	margin-top: 10px;
 }
-.page-item h1 {
+#internal-page h1 {
+    font:5px "Source Sans", helvetica, arial, sans-serif;
 	width:100%;
 	font-size: 25px;
 	text-align: center;
+	
 }
 .page-item p {
 	margin-top:10px;
