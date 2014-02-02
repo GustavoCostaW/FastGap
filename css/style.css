@@ -59,7 +59,7 @@ header#header-app {
 #content a {
 	color:#b8b9b9;
 }
-#content, .page {
+#content, #page {
     -webkit-overflow-scrolling:touch;
 }
 /* MENU BUTTON */
@@ -91,11 +91,9 @@ menu {
     position:relative;
 }
 /* INTERNAL PAGES */
-.page {
+#internal-page {
+    padding:10px;
 	padding-bottom: 20px;
-}
-.space {
-	padding:10px;
 }
 .page-item {
 	overflow: hidden;

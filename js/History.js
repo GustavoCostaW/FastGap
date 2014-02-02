@@ -8,10 +8,10 @@
 	"use strict";
 
 	// Localise Globals
-	var History = window.History = window.history||{};
+	//var History = window.History = window.history||{};
 	
-	History.bind = function(event, callback){
-		window.addEventListener(event, callback);
-	};
+	/*History.bind = function(event, callback){
+		//window.addEventListener(event, callback);
+	};*/
 		
 })(window);

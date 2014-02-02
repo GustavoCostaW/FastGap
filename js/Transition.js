@@ -35,7 +35,7 @@
 
             Transition.control = false;
             if (!Navigator.isBack) {
-                window.History.pushState(null, null, Navigator.currentPage);
+                //window.History.pushState(null, null, Navigator.currentPage);
             }
         }
     };

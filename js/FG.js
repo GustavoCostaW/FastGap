@@ -68,7 +68,7 @@
         });
         
         //history # listener
-        History.bind('popstate', function() {
+        /*History.bind('popstate', function() {
             if (FG.first) {
                 FG.first = false;
                 return;
@@ -85,6 +85,6 @@
             Transition.control = true;
             Transition.class = Transition.getClassAnimation(Navigator.currentPage);
             Transition.start();
-        });
+        });*/
     };
 })(window);
