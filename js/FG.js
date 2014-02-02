@@ -3,10 +3,11 @@
 (function(window) {
     // FastGap object
     var FG = window.FG = {
-        myScroll: null,
+        scrollApp: null,
+        scrollMenu:null,
         currentController:null,
-        elContent: "#content", //set here content app
         first: true,
+        $contentLoad:null,
         $menu: null,
         $content: null,
         $headerApp: null,
@@ -16,12 +17,14 @@
         FG.setDomElements();
         this.addEventListeners();
         this.definitions();
-        PageLoad.load('home.html');
+        
+        Navigator.loadPage('home.html');
     };
     //set fg elements
     FG.setDomElements = function() {
+        FG.$contentLoad = $("#load-content-here");
         FG.$menu = $("#menu");
-        FG.$content = $(FG.elContent);
+        FG.$content = $("#content");
         FG.$headerApp = $('#header-app');
     }
     //set definitions project
@@ -44,6 +47,23 @@
         //listener swipe events
         Hammer(document).on("swipeleft", Transition.toggleMenu);
         Hammer(document).on("swiperight", Transition.toggleMenu);
+        
+        //scroll
+        $("#iscroll").height(window.innerHeight - FG.$headerApp.height());
+        $("menu").height(window.innerHeight);
+        
+        FG.scrollApp = new IScroll("#iscroll", {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+        });
+        
+        FG.scrollMenu = new IScroll("menu", {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+        });
+        
         //history # listener
         History.bind('popstate', function() {
             if (FG.first) {

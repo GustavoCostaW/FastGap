@@ -1,4 +1,4 @@
-<!-- CREATED BY @GUSTAVOCOSTAW -->
+<!-- /* FASTGAP https://github.com/GustavoCostaW/FastGap */ -->
 <!doctype html>
 <html lang="pt-br">
 	<head>
@@ -11,6 +11,7 @@
 
 		<!-- CONTROLLERS -->
 		<script src="js/controllers/AppController.js"></script>
+		<script src="js/controllers/HomeController.js"></script>
 		<script src="js/controllers/Page1Controller.js"></script>
 		<script src="js/controllers/Page2Controller.js"></script>
 		<script src="js/controllers/Page3Controller.js"></script>
@@ -41,6 +42,9 @@
 			<menu id="menu">
 				<div class="topcoat-list">
 					<ul class="topcoat-list__container">
+						<li class="topcoat-list__item botoes-app" data-url="home.html">
+							Home
+						</li>
 						<li class="topcoat-list__item botoes-app" data-url="page1.html">
 							Transition 1 + SCROLL TEST
 						</li>
@@ -66,8 +70,11 @@
 			</header>
 			<!-- DYNAMIC CONTENT -->
 			<div id="content">
-
-
+                <div id="iscroll">
+                    <div id="load-content-here">
+                        
+                    </div>
+                </div>
 			</div>
 		</div>
 	</body>

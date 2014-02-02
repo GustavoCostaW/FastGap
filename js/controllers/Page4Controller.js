@@ -8,7 +8,6 @@ Page4Controller.prototype = {
          // unset events
          // stop ajax
          // destroy components
-         FG.scroll = null;
          PageLoad.ajxHandle = null;
      }
 };

@@ -8,43 +8,15 @@
         isBack: false
     };
     //load page
-    Navigator.loadPage = function() {
+    Navigator.loadPage = function(url) {
         Transition.control = true;
-        Navigator.currentPage = $(this).data("url");
-
-        if (FG.currentController != null){
-            // unset everything in the previous controller
-            // prevent memory leaks
-            FG.currentController.destroy();
+        if(typeof url == "string") {
+            Navigator.currentPage = url;
         }
-
-        // create new controller
-        switch(Navigator.currentPage){
-            case 'page1.html':
-                FG.currentController = new Page1Controller();
-            break;
-            case 'page2.html':
-                FG.currentController = new Page2Controller();
-            break;
-            case 'page3.html':
-                FG.currentController = new Page3Controller();
-            break;
-            case 'page4.html':
-                FG.currentController = new Page4Controller();
-            break;
-            case 'page5.html':
-                FG.currentController = new Page5Controller();
-            break;
-            default:
-                alert('No controller found.');
-            break;
+        else {
+            Navigator.currentPage = $(this).data("url");
         }
-
-        // once new controller created, initialize it
-        if (FG.currentController != null){
-            FG.currentController.initialize();
-        }
-
+        
         Transition.class = Transition.getClassAnimation(Navigator.currentPage);
         Transition.start();
     };

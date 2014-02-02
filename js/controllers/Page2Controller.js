@@ -7,7 +7,6 @@ Page2Controller.prototype = {
      destroy: function(){
      	alert("destroy Page2 Controller, destroy elements, scroll and ajax");
          
-         FG.scroll = null;
          PageLoad.ajxHandle = null;
      }
 };
