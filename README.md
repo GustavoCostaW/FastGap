@@ -31,6 +31,7 @@ Apache server for test on your navegator or run in PhoneGap platform
 
 [Release 1.1 [BETA]](https://github.com/GustavoCostaW/FastGap/releases/tag/1.1 "Release 1.1")
 
-<h2>Vídeo Demos</h2>
+Tutorial - screencast - português
 
-soon
+http://www.youtube.com/watch?v=GZpSuTN3ln0
+
