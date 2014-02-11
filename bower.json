@@ -27,6 +27,7 @@
     "hammerjs": "~1.0.6",
     "fastclick": "~0.6.11",
     "iscroll": "~5.1.1",
-    "zepto": "~1.1.2"
+    "zepto": "~1.1.2",
+    "topcoat": "~0.8.0"
   }
 }
