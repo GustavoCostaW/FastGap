@@ -22,5 +22,8 @@
     "app/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "hammerjs": "~1.0.6"
+  }
 }
