@@ -25,6 +25,7 @@
   ],
   "dependencies": {
     "hammerjs": "~1.0.6",
-    "fastclick": "~0.6.11"
+    "fastclick": "~0.6.11",
+    "iscroll": "~5.1.1"
   }
 }
