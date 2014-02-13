@@ -1,4 +1,4 @@
-FastGap
+FastGap [![Build Status](https://travis-ci.org/GustavoCostaW/FastGap.png?branch=master)](https://travis-ci.org/GustavoCostaW/FastGap)
 =======
 
 Faster PhoneGap Template.
