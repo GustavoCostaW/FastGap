@@ -13,45 +13,46 @@
     };
     //sucess load
     PageLoad.success = function(content) {
-        // add content in #page
-        FG.$contentLoad.html(content);
-        
-        if (FG.currentController != null){
+
+        if (FG.currentController != null) {
             // unset everything in the previous controller
             // prevent memory leaks
             FG.currentController.destroy();
         }
 
+        // add content in #page
+        FG.$contentLoad.html(content);
+
         // create new controller
-        switch(Navigator.currentPage){
+        switch (Navigator.currentPage) {
             case 'home.html':
                 FG.currentController = new HomeController();
-            break;
+                break;
             case 'page1.html':
                 FG.currentController = new Page1Controller();
-            break;
+                break;
             case 'page2.html':
                 FG.currentController = new Page2Controller();
-            break;
+                break;
             case 'page3.html':
                 FG.currentController = new Page3Controller();
-            break;
+                break;
             case 'page4.html':
                 FG.currentController = new Page4Controller();
-            break;
+                break;
             case 'page5.html':
                 FG.currentController = new Page5Controller();
-            break;
+                break;
             default:
                 alert('No controller found.');
-            break;
+                break;
         }
 
         // once new controller created, initialize it
-        if (FG.currentController != null){
+        if (FG.currentController != null) {
             FG.currentController.initialize();
         }
-        
+
         FG.scrollApp.refresh();
         Transition.hideMenu();
         FG.$content.removeClass(Transition.class);

@@ -1,10 +1,9 @@
 /* FASTGAP https://github.com/GustavoCostaW/FastGap */
 
 
-var connection = "";
-
 //starts app
-$(document).ready(function(){
-        FG.init();
-        new AppController().initialize();
+$(document).ready(function() {
+    //create the project
+    FG.init();
+    new AppController().initialize();
 });
