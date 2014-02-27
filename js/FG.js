@@ -3,13 +3,13 @@
     // FastGap object
     var FG = window.FG = {
         scrollApp: null,
-        scrollMenu:null,
-        currentController:null,
+        scrollMenu: null,
+        currentController: null,
         first: true,
-        $contentLoad:null,
+        $contentLoad: null,
         $menu: null,
         $content: null,
-        $headerApp: null,
+        $headerApp: null
     };
     //init project
     FG.init = function() {
@@ -27,7 +27,7 @@
         FG.$menu = $("#menu");
         FG.$content = $("#content");
         FG.$headerApp = $('#header-app');
-    }
+    };
     //set definitions project
     FG.definitions = function() {
         //fastclick, performance library of mouse events to touch events
@@ -57,14 +57,14 @@
             scrollbars: true,
             mouseWheel: true,
             interactiveScrollbars: true,
-            fadeScrollbars:true
+            fadeScrollbars: true
         });
         
         FG.scrollMenu = new IScroll("#menu-content", {
             scrollbars: true,
             mouseWheel: true,
             interactiveScrollbars: true,
-            fadeScrollbars:true
+            fadeScrollbars: true
         });
         
         //history # listener
