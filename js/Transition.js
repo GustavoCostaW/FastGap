@@ -15,14 +15,14 @@
         'page3.html': 'transitionApp3',
         'page4.html': 'transitionApp4',
         'page5.html': 'transitionApp5'
-    }
+    };
     //get current class for page
     Transition.getClassAnimation = function(page) {
         if (Transition.animations.hasOwnProperty(page)) {
             return Transition.animations[page];
         }
         return Transition.class;
-    }
+    };
 
     //start transition
     Transition.start = function() {
