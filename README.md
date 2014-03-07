@@ -5,19 +5,22 @@ Faster PhoneGap Template.
 
 FastGap é um template feito por brasileiros para iniciar o desenvolvimento de apps nativos para smartphones utilizando o PhoneGap.
 
-FastGap is a template created ​​by Brazilians to start developing native apps for smartphones using PhoneGap.
+FastGap is a template created by Brazilians to start developing native apps for smartphones using PhoneGap.
 
 
-<h2>We use:</h2>
+<h2>We use in FastGap:</h2>
 
 Zepto.js
 http://zeptojs.com
 
+IScroll:
+http://cubiq.org/iscroll
+
 TopCoat
 http://topcoat.io
 
-IScroll:
-http://cubiq.org/iscroll
+
+<h2>How to use? </h2>
 
 ##### Install this packages with ```bower```
 
