@@ -1,13 +1,13 @@
 FastGap
 =======
 
-<h2>
+<h3>
 We moved the entire project to better organization to:
-http://https://github.com/FastGap/fastgap
-</h2>
+https://github.com/FastGap/fastgap
+</h3>
 
 
-<h2>
+<h3>
 Nós mudamos todo o projeto para melhor organização para:
 http://https://github.com/FastGap/fastgap
-</h2>
+</h3>
