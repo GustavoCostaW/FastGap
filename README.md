@@ -9,5 +9,5 @@ https://github.com/FastGap/fastgap
 
 <h3>
 Nós mudamos todo o projeto para melhor organização para:
-http://https://github.com/FastGap/fastgap
+https://github.com/FastGap/fastgap
 </h3>
